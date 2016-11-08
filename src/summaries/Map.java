@@ -19,7 +19,7 @@ public class Map extends Mapper<LongWritable, Text, Text, DoubleWritable>{
         try {
             String maritalStatus = data[5];
             Double hrs = Double.parseDouble(data[12]);
-            
+
             context.write(new Text(maritalStatus), new DoubleWritable(hrs));
         } catch (Exception e){
 
